@@ -13,8 +13,8 @@ const port =process.env.PORT
 
 
 app.use("/users",userRouter)
-app.use(authenticate)
-app.use("/posts",postRouter)
+
+app.use("/posts",authenticate,postRouter)
 
 app.listen(port , async () => {
     try{
