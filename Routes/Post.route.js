@@ -43,7 +43,7 @@ postRouter.patch("/update/:id" ,async (req,res)=>{
 postRouter.delete("/delete/:id" ,async (req,res)=>{
     const id = req.params.id;
     await PostModel.deleteOne({_id:id})
-    res.send({msg:"Todo Deleted"})
+    res.send({msg:"Post Deleted"})
 })
 module.exports={
     postRouter
